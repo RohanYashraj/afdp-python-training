@@ -23,7 +23,7 @@ Notebooks 2 and 3 need the CSV. The loading cell opens a file-chooser in Colab t
 
 The loading cell in Notebooks 2 and 3 is pre-set with `DATA_URL` pointing at the CSV in this GitHub repository, so participants normally do not need to upload anything. If the repository is renamed or the file moves, update that link; setting `DATA_URL = ""` falls back to the Colab file-chooser.
 
-Notebook 3 additionally needs a free Gemini API key: create one at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then in Colab add it under *Secrets* (key icon in the left sidebar) with the name `GOOGLE_API_KEY` and *Notebook access* switched on. The notebook explains this step to participants; it is worth doing it live on the projector. The default model is `gemini-2.5-flash`, which is on Google's free tier at the time of writing; the model id is a single variable at the top of section 4 if it needs changing.
+Notebook 3 additionally needs a free Gemini API key: create one at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then in Colab add it under *Secrets* (key icon in the left sidebar) with the name `GOOGLE_API_KEY` and *Notebook access* switched on. The notebook explains this step to participants; it is worth doing it live on the projector. The default model is `gemini-3.5-flash-lite`, which is on Google's free tier at the time of writing; the model id is a single variable at the top of section 4 if it needs changing.
 
 The notebooks also run locally under Anaconda / Jupyter with the CSV in the same folder. Notebook 3 needs `pip install agno google-genai` and the key in the `GOOGLE_API_KEY` environment variable.
 
