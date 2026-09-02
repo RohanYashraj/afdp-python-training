@@ -27,7 +27,7 @@ Notebook 3 additionally needs a free Gemini API key: create one at [aistudio.goo
 
 The notebooks also run locally under Anaconda / Jupyter with the CSV in the same folder. Notebook 3 needs `pip install agno google-genai` and the key in the `GOOGLE_API_KEY` environment variable.
 
-The notebooks are committed with their cell outputs cleared so participants run everything live. Notebook 2 writes `claim_frequency_by_age_band.xlsx` and `charges_by_region_smoker.csv` next to itself when run; both are regenerated each time and are excluded from the repository via `.gitignore`.
+The notebooks are committed with their cell outputs included, so the expected results and charts can be previewed on GitHub before running anything. Notebook 2 writes `claim_frequency_by_age_band.xlsx` and `charges_by_region_smoker.csv` next to itself when run; both are regenerated each time and are excluded from the repository via `.gitignore`.
 
 ## Suggested timing (2 hours)
 

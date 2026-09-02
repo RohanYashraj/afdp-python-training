@@ -15,10 +15,10 @@ All notebooks are designed to run in [Google Colab](https://colab.research.googl
 
 ## Contributing / editing the notebooks
 
-Notebooks are committed with their cell outputs cleared. A git clean filter (`.gitattributes` + `scripts/strip_notebook_outputs.py`) does this automatically at commit time and normalises the kernel metadata, so you can run notebooks freely without polluting the history. It is repo-local configuration, so run this once after cloning:
+Notebooks are committed **with** their cell outputs so the tables and charts render directly on GitHub. A git clean filter (`.gitattributes` + `scripts/normalise_notebook_metadata.py`) resets machine-specific metadata (local kernel name, Python version, execution timestamps) at commit time so diffs contain only real changes. It is repo-local configuration, so run this once after cloning:
 
 ```bash
-git config filter.nbstrip.clean "python3 scripts/strip_notebook_outputs.py"
-git config filter.nbstrip.smudge cat
-git config filter.nbstrip.required true
+git config filter.nbnorm.clean "python3 scripts/normalise_notebook_metadata.py"
+git config filter.nbnorm.smudge cat
+git config filter.nbnorm.required true
 ```

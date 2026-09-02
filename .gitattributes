@@ -1,1 +1,1 @@
-*.ipynb filter=nbstrip
+*.ipynb filter=nbnorm
