@@ -21,7 +21,7 @@ Materials for the two-hour Python session at the 2026 Actuarial Faculty Developm
 
 Notebooks 2 and 3 need the CSV. The loading cell opens a file-chooser in Colab the first time it runs - pick `us_health_insurance_dataset_afdp.csv` from your computer. Uploaded files are deleted when a Colab session ends, so participants may need to upload again on a second day.
 
-**To avoid the upload step entirely**, host the CSV somewhere public (a GitHub repository's "raw" link works well) and paste that link into the `DATA_URL = ""` line of the loading cell in Notebooks 2 and 3. That is the recommended setup for the day itself.
+The loading cell in Notebooks 2 and 3 is pre-set with `DATA_URL` pointing at the CSV in this GitHub repository, so participants normally do not need to upload anything. If the repository is renamed or the file moves, update that link; setting `DATA_URL = ""` falls back to the Colab file-chooser.
 
 Notebook 3 additionally needs a free Gemini API key: create one at [aistudio.google.com/apikey](https://aistudio.google.com/apikey), then in Colab add it under *Secrets* (key icon in the left sidebar) with the name `GOOGLE_API_KEY` and *Notebook access* switched on. The notebook explains this step to participants; it is worth doing it live on the projector. The default model is `gemini-2.5-flash`, which is on Google's free tier at the time of writing; the model id is a single variable at the top of section 4 if it needs changing.
 
@@ -50,6 +50,6 @@ The notebooks also run locally under Anaconda / Jupyter with the CSV in the same
 ## Before the session - checklist
 
 - Update the date on slide 1 and the presenters on slide 2 if needed.
-- Host the CSV and paste the link into `DATA_URL` in Notebooks 2 and 3 (optional but recommended).
+- Check that the `DATA_URL` link in Notebooks 2 and 3 still resolves (the repository must be public).
 - Run all three notebooks end-to-end in Colab once, with a fresh Gemini key, the day before.
 - Send participants the instructions PDF and ask them to test Colab in advance.
