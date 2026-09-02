@@ -12,3 +12,13 @@ All notebooks are designed to run in [Google Colab](https://colab.research.googl
 ## Dataset
 
 `us_health_insurance_dataset_afdp.csv` (1,338 rows) is used in both years and comes from Kaggle: [US Health Insurance Dataset](https://www.kaggle.com/datasets/teertha/ushealthinsurancedataset).
+
+## Contributing / editing the notebooks
+
+Notebooks are committed with their cell outputs cleared. A git clean filter (`.gitattributes` + `scripts/strip_notebook_outputs.py`) does this automatically at commit time and normalises the kernel metadata, so you can run notebooks freely without polluting the history. It is repo-local configuration, so run this once after cloning:
+
+```bash
+git config filter.nbstrip.clean "python3 scripts/strip_notebook_outputs.py"
+git config filter.nbstrip.smudge cat
+git config filter.nbstrip.required true
+```
